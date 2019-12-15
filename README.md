@@ -18,11 +18,11 @@ The project requires the use of Maven and Spring Boot, along with Java 8.
 #Setup Instructions
 
 1. Package all components
-    cd ${PROJECT_HOME}
-    cd eureka; mvn package
-    cd vehicles-api; mvn package
-    cd pricing-service; mvn package
-    cd boogle-maps; mvn package
+    - cd ${PROJECT_HOME}
+    - cd eureka; mvn package
+    - cd vehicles-api; mvn package
+    - cd pricing-service; mvn package
+    - cd boogle-maps; mvn package
 
 2. Start individual services .  Follow this order. start Eureka Server first.
       - cd eureka; java -jar target/eureka-0.0.1-SNAPSHOT.jar

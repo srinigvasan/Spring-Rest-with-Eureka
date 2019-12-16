@@ -157,6 +157,20 @@ public class CarControllerTest {
 
     }
 
+    @Test
+    public void testupdateCar() throws Exception {
+     Car updatecar=getCar();
+        updatecar.setCondition(Condition.NEW);
+        MockHttpServletRequestBuilder builder =
+                MockMvcRequestBuilders.put("/cars/" + updatecar.getId())
+                        .content(json.write(updatecar).getJson())
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
+                        .accept(MediaType.APPLICATION_JSON_UTF8);
+
+        mvc.perform(builder)
+                .andExpect(status().is2xxSuccessful());
+    }
+
     /**
      * Creates an example Car object for use in testing.
      * @return an example Car object
